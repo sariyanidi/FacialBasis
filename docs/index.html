@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: rgb(255, 255, 255);
+		}
+		hr {
+			border-top: 1px dotted #8c8b8b;
+			border-top: 0px dotted #8c8b8b;
+		}
+		h1 {
+			padding: 4px;
+			font-size:22pt;
+			color: rgb(60, 60, 60);
+			text-align: center;
+
+		}
+		h2 {
+			border-bottom: 1px solid #dedede;
+			background-color: rgb(250, 250, 250);
+			padding: 4px;
+			font-size:18pt;
+			color: rgb(60, 60, 60);
+		}
+		.container {
+			width: 66%;
+			margin:0 auto;
+			text-align:center;
+			justify-content: center;
+		}
+
+		table.links {
+			table-layout: fixed;  margin:0 auto;
+			text-align:center;
+		}
+		table.links td {
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		.container p, ul {
+			text-align:justify;
+			font-family: Arial;
+			font-size: 10.5pt;
+			color:rgb(70,70,70);
+			line-height: 1.5;
+		}
+	</style>
+</head>
+<body>
+
+  <!-- videos are produced with the following command:
+  ffmpeg -i input.mp4 -vcodec libx264 -f mp4 -vb 1024k -preset slow output.mp4
+  !-->
+  <h1>Beyond FACS: Data-driven Facial Expression Dictionaries,  with Application to Predicting Autism</h1>
+  <div class="container">
+
+  	<table width=80% style="table-layout: fixed; margin:0 auto;">
+  		<tr>
+  <td>Evangelos Sariyanidi<sup>1</sup></td>
+  <td>Lisa Yankowitz<sup>1,2</sup></td>
+  <td>Robert T. Schultz<sup>1,2</sup></td>
+  <td>John D. Herrington<sup>1,2</sup></td>
+  <td>Birkan Tunc†<sup>1,2</sup></td>
+  <td>Jeffrey Cohn†<sup>3,4</sup></td>
+  		</tr>
+<tr><td colspan=6>†Equal Contribution</td></tr>
+  		<tr>
+  			<td colspan=6 style="text-align: center; color: rgb(120,120,120); font-size:11pt"><sup>1</sup>The Children's Hospital of Philadelphia, <sup>2</sup>University of Pennsylvania, <sup>3</sup>University of Pittsburgh, <sup>4</sup>Deliberate AI</td>
+  		</tr>
+  	</table>
+  	<hr/>
+  	<table class="links">
+  		<tr>
+  			<td><a href="https://github.com/sariyanidi/FacialBasis" target="_blank">Code (github)</a></td>
+  			<!--<td><a href="https://ieeexplore.ieee.org/abstract/document/10330115">Paper (TPAMI'24)</a></td>-->
+  			<!--<td><a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123540409.pdf">Paper (ECCV'20)</a></td>-->
+  		</tr>
+  	</table>
+  	<hr/>
+  	<!--
+  	<table>
+  		<tr>
+  			<td width="50%"> <p style="text-align:left;">3DI is an optimization-based 3DMM fitting (3D reconstruction) method that enforces inequality constraints on 3DMM parameters and landmarks (Figure on right). Inequality constraints significantly restrict the search space and rule out implausible solutions  (Figure below). 3DI is <b>not</b> a learning-based method, thus is more flexible; e.g., it can straighforwardly incorporate camera matrix or be adapted to an arbitrary morphable model relatively easily.
+  			</p>
+  		</td>
+  		<td width="50%"> <img src="demos/figs/main.png"  alt="Inequality constraints" style="width:95%"></td>
+  	</tr>
+  </table>
+  <p style="text-align:center;"></p>
+  <table>
+  	<tr>
+  		<td>
+
+  			<p>This <b>project page</b> provides demos as well as a <b>CUDA implementation</b> of 3DI. The 3DI method can be used for a variety of facial analysis tasks including</p>
+  			<ul style="text-align:left;">
+  				<li>3D face reconstruction</li>
+  				<li>Pose estimation</li>
+  				<li>Expression quantification</li>
+  				<li>2D landmark detection</li>
+  				<li>3D landmark detection</li>
+  				<ul>
+  					<li>On world coordinates (with pose and expression variation)
+  						<li>Canonicalized (i.e., pose and/or identity effect removed)
+  						</ul>
+  					</ul>
+  					<p>The various output types of 3DI are presented in the <a href="https://github.com/Computational-Psychiatry/3DI">github page</a>.</p>
+  				</td>
+  				<td width="50%">
+  					<img src="demos/figs/constraints.png" alt="Inequality constraints" style="width:50%">
+  				</td>
+  			</tr>
+  		</table>
+-->
+  	</div>
+  	<div class="container" style="background-color: white; ">
+  		<h2>Demo: Reconstructed faces</h2>
+  		<!-- videos are produced with the following command: ffmpeg -i $f -vcodec libx264 -f mp4 -vb 1024k -preset slow web_friendly/$f -->
+  		<div class="center">
+  			<video width="50%" autoplay loop controls><source src="vids/LFB_recoded.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
+  		</div>
+  		<div class="center">
+  			<video width="32%" autoplay loop controls><source src="demos/rec/dhilma_cut_3D2.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
+  			<video width="32%" autoplay loop controls><source src="demos/rec/donlemon2_cut2_3D2.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
+  			<video width="32%" autoplay loop controls><source src="demos/rec/mariacallas_cut_3D2.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
+  		</div>
+            <!--
+            <div class="center">
+            <video width="32%" autoplay loop controls><source src="demos/rec/bowie_cut2_3D2.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
+            <video width="32%" autoplay loop controls><source src="demos/rec/briannajoy_cut2_3D2.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
+            <video width="32%" autoplay loop controls><source src="demos/rec/pavarotti_cut2_3D2.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
+          </div>
+      -->
+
+      <h2>Landmarks</h2>
+      <div class="center">
+      	<video width="32%" autoplay loop controls><source src="demos/lmks/dhilma_cut_lmks.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
+      	<video width="32%" autoplay loop controls><source src="demos/lmks/elaine_cut2_lmks.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
+      	<video width="32%" autoplay loop controls><source src="demos/lmks/donlemon2_cut2_lmks.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
+      </div>
+
+      <h2> Pose-expression separation</h2>
+      <div class="center">
+      	<video width="32%" autoplay loop controls><source src="demos/rec/serena_williams_cut2_3D3.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
+      	<video width="32%" autoplay loop controls><source src="demos/rec/elaine_cut2_3D3.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
+      	<video width="32%" autoplay loop controls><source src="demos/rec/aretha_cut_3D3.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
+      </div>
+
+      <hr style="padding-top:20px"/>
+
+
+  </div>
+
+
+
+
+</body>
+</html>
