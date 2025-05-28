@@ -13,9 +13,10 @@ chmod +x install.sh
 
 Demo
 ```
-python face_alignment_opencv/process_video.py testdata/elaine.mp4  --save_result_video 0
+python face_alignment_opencv/process_video.py testdata/elaine.mp4  --save_result_video 0 --visualize_result 0
 python process_video.py testdata/elaine.mp4 testdata/elaine.csv testdata/elaine.expressions testdata/elaine.poses
 python compute_local_exp_coefficients.py testdata/elaine.expressions testdata/elaine.local_expressions
 ```
 
+The local expression coefficients in the demo above are stored in `testdata/elaine.local_expressions`
 
