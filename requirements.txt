@@ -1,0 +1,9 @@
+kornia
+scipy
+opencv-python
+scikit-image
+pandas
+torchvision==0.16.0
+matplotlib
+ninja
+scikit-learn
