@@ -39,5 +39,5 @@ python process_video.py testdata/elaine.mp4 testdata/elaine.csv testdata/elaine.
 python compute_local_exp_coefficients.py testdata/elaine.expressions testdata/elaine.local_expressions
 ```
 
-The local expression coefficients in the demo above are stored in `testdata/elaine.local_expressions`
+The local expression coefficients in the demo above are stored in `testdata/elaine.local_expressions`. This file is a text file with a matrix of size `T x 50`, where `T` is the number of frames in the video and 50 is the coefficients corresponding to the 50 Facial Basis Units (BUs).
 
