@@ -34,7 +34,7 @@ The code below will run the Facial Basis method on a test video. The three lines
 * Computation of 3DMM expression coefficients
 * Computation of the local expression coefficients
 ```
-python face_alignment_opencv/process_video.py testdata/elaine.mp4  --save_result_video 0 --visualize_result 0
+python face_alignment_opencv/process_video.py testdata/elaine.mp4 
 python process_video.py testdata/elaine.mp4 testdata/elaine.csv testdata/elaine.expressions testdata/elaine.poses
 python compute_local_exp_coefficients.py testdata/elaine.expressions testdata/elaine.local_expressions
 ```
