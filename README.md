@@ -41,3 +41,7 @@ python compute_local_exp_coefficients.py testdata/elaine.expressions testdata/el
 
 The local expression coefficients in the demo above are stored in `testdata/elaine.local_expressions`. This file is a text file with a matrix of size `T x 50`, where `T` is the number of frames in the video and 50 is the coefficients corresponding to the 50 Facial Basis Units (BUs).
 
+
+## License
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+[![CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/)
